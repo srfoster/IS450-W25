@@ -1,7 +1,7 @@
 #### Installation
 
 ```
-git clone ____
+git clone git@github.com:srfoster/IS450-W25.git
 cd IS450-W25
 npm i
 npm start
