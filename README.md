@@ -1,3 +1,12 @@
+#### Installation
+
+```
+git clone ____
+cd IS450-W25
+npm i
+npm start
+```
+
 
 
 #### Ideas
