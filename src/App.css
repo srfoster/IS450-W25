@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Custom CSS */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Custom CSS */
+body {
+    /* background: linear-gradient(to top right, rgb(227, 127, 4), rgb(43, 43, 255)); */
+    /*background-image: url('../Images/background.jpg');*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0; /* To remove default body margin */
+    padding: 0; /* To remove default body padding */
+    height: 100vh; /* Set the height of the body to the viewport height */
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+header {
+    text-align: center;
+    padding-top: 20px;
 }
+
+.content, header img {
+    position: relative;
+}
+.giticon {
+    position: absolute;
+}
+
+header img {
+    width: 15%;
+    height: 15%;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 17em;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 3em;
+    overflow:visible;
+}
+
+.section {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    vertical-align: top;
+    margin-top: 3em;
+}
+
+.section h2 {
+    font-size: 24px;
+}
+
+.section p {
+    font-size: 16px;
+}
+
+
