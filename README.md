@@ -1,6 +1,4 @@
 
-#### Currently working on...
-
 - [Story] 
     As a user, I want to start a quiz by selecting a 
     topic so that I can focus on specific areas of the 
