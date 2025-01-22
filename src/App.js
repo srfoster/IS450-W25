@@ -2,7 +2,8 @@ import './App.css'
 
 import React, { useState } from "react";
 import { Button, Typography, Container, Box, Grid, Card, CardContent, CardActions } from "@mui/material";
-
+import TopicList from './TopicList';
+import Quiz from './Quiz';
 
 const App2 = () => {
   return <>
@@ -58,7 +59,6 @@ const Greeting = (props) => {
 
 
 const App = () => {
-  // Sample topics and questions
   const topics = [
     { id: 1, name: "Scope Management" },
     { id: 2, name: "Risk Management" },
@@ -84,173 +84,39 @@ const App = () => {
       topic: "Risk Management",
       question: "What is a risk register used for?",
       options: [
-        "Tracking project issues",
-        "Documenting potential risks and responses",
-        "Estimating project duration",
-        "Assigning resources",
+        "Identify potential risks",
+        "Track project progress",
+        "Define project scope",
+        "Monitor project costs",
       ],
-      answer: "Documenting potential risks and responses",
+      answer: "Identify potential risks",
     },
+    // ...other questions
   ];
 
   const [currentTopic, setCurrentTopic] = useState(null);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [filteredQuestions, setFilteredQuestions] = useState([]);
 
   const handleStartQuiz = (topic) => {
     setCurrentTopic(topic);
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsQuizCompleted(false);
+    const filtered = questions.filter(q => q.topic === topic.name);
+    setFilteredQuestions(filtered);
   };
 
-  const handleAnswer = (option) => {
-    if (questions[currentQuestionIndex].answer === option) {
-      setScore(score + 1);
-    }
-
-    if (currentQuestionIndex + 1 < questions.length) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      setIsQuizCompleted(true);
-    }
+  const handleQuizComplete = (score) => {
+    console.log(`Quiz completed with score: ${score}`);
   };
-
-
-  let gridOfTopics = topics.map((topic) => (
-    <Grid item key={topic.id} xs={12} sm={6} md={4}>
-    <Card>
-        <CardContent>
-        <Typography variant="h6" align="center">
-            {topic.name}
-        </Typography>
-        </CardContent>
-        <CardActions>
-        <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={() => handleStartQuiz(topic)}
-        >
-            Start Quiz
-        </Button>
-        </CardActions>
-    </Card>
-    </Grid>
-  ))
-
-  let topicSelectionPage = <Box>
-    <Typography variant="h5" align="center" gutterBottom>
-      Topics
-    </Typography>
-    <Grid container spacing={2} justifyContent="center">
-      { gridOfTopics }
-    </Grid>
-  </Box>
 
   return (
-    <Container maxWidth="sm" style={{ marginTop: "20px" }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        PMP Study App
-      </Typography>
-      {!currentTopic ? topicSelectionPage : (
-        <Box>
-          <Typography variant="h5" align="center" gutterBottom>
-            Quiz: {currentTopic.name}
-          </Typography>
-          {!isQuizCompleted ? (
-            <Box>
-              <Typography variant="body1" gutterBottom>
-                Question {currentQuestionIndex + 1}: {questions[currentQuestionIndex].question}
-              </Typography>
-              <Grid container spacing={2}>
-                {questions[currentQuestionIndex].options.map((option, index) => (
-                  <Grid item xs={12} key={index}>
-                    <Button
-                      fullWidth
-                      variant="outlined"
-                      onClick={() => handleAnswer(option)}
-                    >
-                      {option}
-                    </Button>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          ) : (
-            <Box textAlign="center">
-              <Typography variant="h6" gutterBottom>
-                Quiz Completed!
-              </Typography>
-              <Typography variant="body1">
-                Your Score: {score}/{questions.length}
-              </Typography>
-              <Button
-                variant="contained"
-                color="secondary"
-                style={{ marginTop: "20px" }}
-                onClick={() => setCurrentTopic(null)}
-              >
-                Back to Topics
-              </Button>
-            </Box>
-          )}
-        </Box>
+    <div>
+      <h1>Quiz App</h1>
+      {!currentTopic ? (
+        <TopicList topics={topics} onSelectTopic={handleStartQuiz} />
+      ) : (
+        <Quiz questions={filteredQuestions} onQuizComplete={handleQuizComplete} />
       )}
-    </Container>
+    </div>
   );
 };
 
-
-
-function Counter(props) {
-    //Make a state variable...
-    const [count, setCount] = React.useState(0)
-
-    let incrementTheCounter = () => { 
-        setCount(count+10)
-    }
-
-    let decrementTheCounter = () => { 
-        setCount(count-10)
-    }
-
-    let backgroundColor = "white"
-
-    if (props.colorToScale == "red")
-        backgroundColor = `rgb(${count},0,0)`
-    else if(props.colorToScale == "green")
-        backgroundColor = `rgb(0,${count},0)`
-    else if(props.colorToScale == "blue")
-        backgroundColor = `rgb(0,0,${count})`
-
-
-    return <>
-        <Button
-            variant="outlined"
-            onClick={decrementTheCounter} >
-            -
-        </Button>
-        <span style={{
-            padding: 10,
-            //fontSize: 30 + count,
-            color: 'white',
-            borderRadius: 100,
-            backgroundColor: backgroundColor 
-        }}>{count}</span>
-        <Button
-            variant="outlined"
-            onClick={incrementTheCounter} >
-            +
-        </Button>
-    </>
-}
-
-
-
-
-
-
-
-export default App
+export default App;
