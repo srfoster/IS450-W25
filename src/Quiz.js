@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const Quiz = ({ questions, onQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -21,22 +24,34 @@ const Quiz = ({ questions, onQuizComplete }) => {
 
   if (isQuizCompleted) {
     return (
-      <div>
-        <h2>Quiz Completed!</h2>
-        <p>Your score: {score}</p>
-      </div>
+      <Box display="flex" flexDirection="column" alignItems="center" p={2}>
+        <Typography variant="h4" component="div" gutterBottom>
+          Quiz Completed!
+        </Typography>
+        <Typography variant="h6" component="div">
+          Your score: {score}
+        </Typography>
+      </Box>
     );
   }
 
   return (
-    <div>
-      <h2>{questions[currentQuestionIndex].question}</h2>
+    <Box display="flex" flexDirection="column" alignItems="center" p={2}>
+      <Typography variant="h5" component="div" gutterBottom>
+        {questions[currentQuestionIndex].question}
+      </Typography>
       {questions[currentQuestionIndex].options.map((option, index) => (
-        <button key={index} onClick={() => handleAnswer(option)}>
+        <Button 
+          key={index} 
+          variant="contained" 
+          color="primary" 
+          onClick={() => handleAnswer(option)} 
+          sx={{ mt: 1 }}
+        >
           {option}
-        </button>
+        </Button>
       ))}
-    </div>
+    </Box>
   );
 };
 
