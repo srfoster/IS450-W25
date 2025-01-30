@@ -1,0 +1,132 @@
+[
+    {
+        "id": 6,
+        "topics": ["Risk Management", "Scenario"],
+        "question": "During a risk review meeting, your team identifies a high-impact risk that could delay the project by several months. The risk has a low probability of occurring, but the impact would be severe. What will you do next?",
+        "options": [
+            "Ignore the risk since it has a low probability of occurring.",
+            "Add the risk to the risk register and assign a team member to monitor it.",
+            "Immediately escalate the risk to the project sponsor for further action.",
+            "Develop a contingency plan and allocate resources to mitigate the risk."
+        ],
+        "answer": "Develop a contingency plan and allocate resources to mitigate the risk.",
+        "rational": "According to the PMBOK Guide (7th Edition), risks with high impact, even if low probability, should be proactively managed. Developing a contingency plan ensures the project is prepared to respond effectively if the risk materializes, aligning with the principle of proactive risk management (PMBOK 7, Section 11)."
+    },
+    {
+        "id": 7,
+        "topic": "Scope Management",
+        "question": "A key stakeholder has requested a significant change to the project scope that would require additional resources and extend the project timeline. The change is not aligned with the project's original objectives. What will you do next?",
+        "options": [
+            "Implement the change immediately to keep the stakeholder satisfied.",
+            "Document the change request and evaluate its impact on the project.",
+            "Reject the change request outright as it deviates from the project's objectives.",
+            "Escalate the change request to the project sponsor without further analysis."
+        ],
+        "answer": "Document the change request and evaluate its impact on the project.",
+        "rational": "The PMBOK Guide (7th Edition) emphasizes the importance of a structured change management process. Documenting and evaluating the change request ensures that all impacts are understood before making a decision, aligning with the principle of integrated change control (PMBOK 7, Section 5.6)."
+    },
+    {
+        "id": 8,
+        "topic": "Communication Management",
+        "question": "You are managing a global project with team members in different time zones. Communication has become a challenge, and important updates are often missed. What will you do next?",
+        "options": [
+            "Schedule meetings at a time convenient for the majority of the team.",
+            "Use a centralized communication tool to ensure all updates are documented and accessible.",
+            "Ask team members to adjust their schedules to accommodate a common meeting time.",
+            "Delegate communication responsibilities to a local team lead in each region."
+        ],
+        "answer": "Use a centralized communication tool to ensure all updates are documented and accessible.",
+        "rational": "The PMBOK Guide (7th Edition) highlights the importance of effective communication in project management. A centralized communication tool ensures transparency, accessibility, and consistency, which are critical for global teams (PMBOK 7, Section 10)."
+    },
+    {
+        "id": 9,
+        "topic": "Quality Management",
+        "question": "During a quality audit, you discover that several deliverables do not meet the agreed-upon quality standards. The team claims they were unaware of the standards. What will you do next?",
+        "options": [
+            "Proceed with the project as is to avoid delays.",
+            "Conduct a training session to ensure the team understands the quality standards.",
+            "Blame the team for not adhering to the standards and demand immediate compliance.",
+            "Escalate the issue to senior management for resolution."
+        ],
+        "answer": "Conduct a training session to ensure the team understands the quality standards.",
+        "rational": "The PMBOK Guide (7th Edition) emphasizes the importance of quality management and ensuring that the team understands the standards. Conducting a training session addresses the root cause of the issue and aligns with the principle of continuous improvement (PMBOK 7, Section 8)."
+    },
+    {
+        "id": 10,
+        "topic": "Procurement Management",
+        "question": "A vendor delivering a critical component for your project has informed you of a delay due to supply chain issues. The delay could impact your project timeline. What will you do next?",
+        "options": [
+            "Wait for the vendor to resolve the issue and update you.",
+            "Terminate the contract with the vendor and find a new supplier immediately.",
+            "Work with the vendor to identify alternative solutions and adjust the project schedule if necessary.",
+            "Escalate the issue to the project sponsor and request additional funding."
+        ],
+        "answer": "Work with the vendor to identify alternative solutions and adjust the project schedule if necessary.",
+        "rational": "The PMBOK Guide (7th Edition) recommends collaboration with vendors to resolve issues and maintain project objectives. Working with the vendor to find alternatives demonstrates proactive problem-solving and aligns with the principle of partnership in procurement management (PMBOK 7, Section 12)."
+    },
+    {
+        "id": 11,
+        "topic": "Stakeholder Management",
+        "question": "A key stakeholder has expressed dissatisfaction with the project's progress and has threatened to withdraw support. What will you do next?",
+        "options": [
+            "Ignore the stakeholder's concerns and focus on delivering the project.",
+            "Schedule a meeting with the stakeholder to understand their concerns and address them.",
+            "Escalate the issue to the project sponsor and request intervention.",
+            "Update the stakeholder regularly but avoid making any changes to the project."
+        ],
+        "answer": "Schedule a meeting with the stakeholder to understand their concerns and address them.",
+        "rational": "The PMBOK Guide (7th Edition) emphasizes the importance of stakeholder engagement and communication. Addressing stakeholder concerns directly helps maintain their support and aligns with the principle of stakeholder collaboration (PMBOK 7, Section 13)."
+    },
+    {
+        "id": 12,
+        "topic": "Schedule Management",
+        "question": "Your project is behind schedule due to unforeseen technical challenges. The project sponsor is pressuring you to deliver on time. What will you do next?",
+        "options": [
+            "Crash the schedule by adding more resources to critical tasks.",
+            "Fast-track the project by overlapping tasks where possible.",
+            "Inform the sponsor of the delay and request an extension to the project timeline.",
+            "Reduce the project scope to meet the original deadline."
+        ],
+        "answer": "Inform the sponsor of the delay and request an extension to the project timeline.",
+        "rational": "The PMBOK Guide (7th Edition) highlights the importance of transparency and realistic planning. Informing the sponsor of the delay and requesting an extension ensures that the project remains achievable and aligns with the principle of honest communication (PMBOK 7, Section 6)."
+    },
+    {
+        "id": 13,
+        "topic": "Cost Management",
+        "question": "During a budget review, you realize that the project is over budget due to unexpected costs. The project sponsor is unaware of the situation. What will you do next?",
+        "options": [
+            "Continue with the project and hope to recover the costs later.",
+            "Immediately inform the sponsor and present a plan to address the budget overrun.",
+            "Cut costs in other areas to balance the budget without informing the sponsor.",
+            "Delay reporting the issue until the next scheduled budget review."
+        ],
+        "answer": "Immediately inform the sponsor and present a plan to address the budget overrun.",
+        "rational": "The PMBOK Guide (7th Edition) stresses the importance of financial transparency and accountability. Informing the sponsor immediately and presenting a mitigation plan aligns with the principle of responsible cost management (PMBOK 7, Section 7)."
+    },
+    {
+        "id": 14,
+        "topic": "Resource Management",
+        "question": "A key team member has resigned unexpectedly, leaving a critical task unfinished. The project timeline is at risk. What will you do next?",
+        "options": [
+            "Assign the task to another team member who is already overloaded.",
+            "Hire a new team member as quickly as possible to fill the gap.",
+            "Reallocate resources and adjust the project schedule to accommodate the loss.",
+            "Escalate the issue to the project sponsor and request additional resources."
+        ],
+        "answer": "Reallocate resources and adjust the project schedule to accommodate the loss.",
+        "rational": "The PMBOK Guide (7th Edition) emphasizes the importance of resource optimization and adaptability. Reallocating resources and adjusting the schedule ensures the project remains on track and aligns with the principle of effective resource management (PMBOK 7, Section 9)."
+    },
+    {
+        "id": 15,
+        "topic": "Integration Management",
+        "question": "You are managing a complex project with multiple interdependent tasks. A change in one task has caused a ripple effect, impacting several other tasks. What will you do next?",
+        "options": [
+            "Proceed with the project and address issues as they arise.",
+            "Conduct an impact analysis and update the project plan accordingly.",
+            "Escalate the issue to the project sponsor and request additional support.",
+            "Terminate the project and start over with a new plan."
+        ],
+        "answer": "Conduct an impact analysis and update the project plan accordingly.",
+        "rational": "The PMBOK Guide (7th Edition) highlights the importance of integration management and understanding the interdependencies between tasks. Conducting an impact analysis ensures that the project plan remains aligned with the current situation, adhering to the principle of holistic project management (PMBOK 7, Section 4)."
+    }
+]

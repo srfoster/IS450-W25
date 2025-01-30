@@ -5,41 +5,9 @@ import { Button, Typography, Container, Box, Grid, Card, CardContent, CardAction
 import TopicList from './TopicList';
 import Quiz from './Quiz';
 
-const App2 = () => {
-  return <>
-    <Greeting name="Stephen" />
-  </>
-}
-
-/*
-
-Hints for adding state (toggleable greeting)
-
-Add your state variable to the Greeting component: 
-
-   const [__,__] = React.useState(___)
-
-Add your button to the Greeting component:
-
-  <button onClick={____}>
-     Hide Greeting
-  </button>
-
-  Make the state variable toggle when button is clicked
-
-Show or hide the greeting based on the state variable:
-
-   HINT: Use a ternary
-
-   {___ ? ___ : ___}
-
-Change the button text to "Show Greeting" based on the state variable.
-
-   HINT: Use another ternary
-
-Have fun! This is a tricky problem, so don't be too hard on yourself if you're stumped at some point.  Just get as far as you can.
-
-*/
+import PMPQuestions_01_28_2025 from "./data/pmp_unique_questions.json"
+import PMP_David_M_ScenarioQuestions1 from "./data/pmp_scenario_questions_1.json"
+import DeepSeek_Scenario_Questions from "./data/deep_seek_scenario_questions.json"
 
 const Greeting = (props) => {
   const [shown, setShown] = React.useState(false)
@@ -59,18 +27,11 @@ const Greeting = (props) => {
 
 
 const App = () => {
-  const topics = [
-    { id: 1, name: "Scope Management" },
-    { id: 2, name: "Risk Management" },
-    { id: 3, name: "Time Management" },
-    { id: 4, name: "Cost Management" },
-    { id: 5, name: "Quality Management" },
-  ];
 
   const questions = [
     {
       id: 1,
-      topic: "Scope Management",
+      topics: ["Scope Management"],
       question: "What is the primary purpose of a Work Breakdown Structure (WBS)?",
       options: [
         "Define project costs",
@@ -82,7 +43,7 @@ const App = () => {
     },
     {
       id: 2,
-      topic: "Risk Management",
+      topics: ["Risk Management"],
       question: "What is a risk register used for?",
       options: [
         "Identify potential risks",
@@ -94,7 +55,7 @@ const App = () => {
     },
     {
       "id": 8,
-      "topic": "Quality Management",
+      "topics": ["Quality Management"],
       "question": "You have been working closely with the quality manager of your project, planning the budget for the project phase that is due to begin in the next two months. They mention the need to budget for appraisal costs, to avoid quality issues in the future. What will you do next?",
       "options": [
         "Ensure there is enough for training the staff to reduce the number of errors.",
@@ -104,10 +65,9 @@ const App = () => {
       ],
       "answer": "Ensure there is enough for a quality tester to verify the deliverables against agreed specifications."
     },
-    [
       {
         "id": 9,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "Which of the following is an example of a prevention cost in the Cost of Quality?",
         "options": [
           "Conducting training for team members to improve their skills.",
@@ -119,7 +79,7 @@ const App = () => {
       },
       {
         "id": 10,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "What type of cost is incurred when a customer returns a defective product?",
         "options": [
           "Appraisal cost",
@@ -131,7 +91,7 @@ const App = () => {
       },
       {
         "id": 11,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "Which activity falls under appraisal costs in the Cost of Quality framework?",
         "options": [
           "Developing a quality management plan.",
@@ -143,7 +103,7 @@ const App = () => {
       },
       {
         "id": 12,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "Which of the following is NOT included in the Cost of Quality?",
         "options": [
           "Prevention costs",
@@ -155,7 +115,7 @@ const App = () => {
       },
       {
         "id": 13,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "What is the primary goal of investing in prevention costs?",
         "options": [
           "To identify defects during production.",
@@ -167,7 +127,7 @@ const App = () => {
       },
       {
         "id": 14,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "What type of cost is associated with rework or scrap due to errors identified during production?",
         "options": [
           "Appraisal cost",
@@ -179,7 +139,7 @@ const App = () => {
       },
       {
         "id": 15,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "Performing audits to verify that a process meets quality standards is an example of:",
         "options": [
           "Prevention cost",
@@ -191,7 +151,7 @@ const App = () => {
       },
       {
         "id": 16,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "Which of the following best describes external failure costs?",
         "options": [
           "Costs related to training the team to prevent defects.",
@@ -203,7 +163,7 @@ const App = () => {
       },
       {
         "id": 17,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "What is the relationship between prevention costs and failure costs?",
         "options": [
           "As prevention costs increase, failure costs typically decrease.",
@@ -215,7 +175,7 @@ const App = () => {
       },
       {
         "id": 18,
-        "topic": "Cost of Quality",
+        "topics": ["Cost of Quality"],
         "question": "What is the primary focus of appraisal costs in the Cost of Quality?",
         "options": [
           "Reducing the occurrence of defects.",
@@ -225,15 +185,30 @@ const App = () => {
         ],
         "answer": "Identifying defects before the product is delivered."
       }
-    ]
-  ];
+  ]
+    .concat(PMPQuestions_01_28_2025)
+    .concat(PMP_David_M_ScenarioQuestions1)
+    .concat(DeepSeek_Scenario_Questions)
+      .map((q) => { if(!q.topics) q.topics = [q.topic]; return q });
+
+  function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }
+  const topics = questions.map((q) => q.topics).flat().filter(onlyUnique).map((t) => { return {name: t} })
 
   const [currentTopic, setCurrentTopic] = useState(null);
   const [filteredQuestions, setFilteredQuestions] = useState([]);
 
+  const filterQuestionsByTopic = (selectedTopics) => {
+    console.log(questions)
+    return questions.filter(question => 
+      question.topics.some(topic => selectedTopics.includes(topic))
+    );
+  };
+
   const handleStartQuiz = (topic) => {
     setCurrentTopic(topic);
-    const filtered = questions.filter(q => q.topic === topic.name);
+    const filtered = filterQuestionsByTopic([topic.name]);
     setFilteredQuestions(filtered);
   };
 

@@ -14,6 +14,7 @@
 
 #### Backlog
 
+- [Feature] Immediate feedback mode (tell me if I got it right or wrong immediately after answering)
 - [Feature] Add a background color. Theme.
 - [Feature] Hamburger menu for navigation (exiting, home, etc)
 

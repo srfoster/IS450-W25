@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "topic": "Team Collaboration",
+        "question": "You have been assigned to a new project, where the work is behind schedule and the team are not working together well. The team is relatively new, and conflicts are arising. Team members are blaming each other for work not done, and some people are not showing up to work on the project at all. What will you do next?",
+        "options": [
+            "Meet with the functional manager to agree on the team members' time requirements.",
+            "Meet with your team to set a team charter and define roles & responsibilities.",
+            "Meet with the project sponsor to gain additional funding for resources who can work together.",
+            "Escalate the issue to the steering committee as soon as possible as a project risk."
+        ],
+        "answer": "Meet with your team to set a team charter and define roles & responsibilities."
+    },
+    {
+        "id": 2,
+        "topic": "Product Management",
+        "question": "You have recently completed a project for a new product and have been asked to manage it after its release to keep it relevant in today\u2019s marketplace. Half of your existing project team are rolling off to other projects soon, and your project budget is nearly depleted. What will you do next?",
+        "options": [
+            "Create a business case and project charter for your project sponsor to approve.",
+            "Retain as many of your current project staff to continue work on the product.",
+            "Raise a change request for your current project to add scope and continue making changes.",
+            "Secure funding for a stable team, then use current research to form a suite of projects to improve the product."
+        ],
+        "answer": "Secure funding for a stable team, then use current research to form a suite of projects to improve the product."
+    },
+    {
+        "id": 3,
+        "topic": "Stakeholder Engagement",
+        "question": "You are delivering a critical change and several key stakeholders in your organisation have added seemingly unnecessary steps for you to take, with extra approvals, reports and meetings. They are also restricting the people you need from working on your project in a larger capacity. What will you do next?",
+        "options": [
+            "Go directly to the people you need to avoid extra back-and-forth with the stakeholders.",
+            "Raise a risk in the risk register on the lack of access to sufficient resources.",
+            "Communicate more often with the stakeholders and gain a deeper awareness of their ideas and situation.",
+            "Show your stakeholders the Resource Assignment Matrix and project roles & responsibilities."
+        ],
+        "answer": "Communicate more often with the stakeholders and gain a deeper awareness of their ideas and situation."
+    },
+    {
+        "id": 4,
+        "topic": "Ethics and Integrity",
+        "question": "You are managing a project team mostly made up of men. Recently Jane was hired for her high expertise in the brands that make up your industry. You notice she has been left out of some key meetings, and others are overlooking her opinions. You also notice she is paid significantly less than her male colleagues. What will you do next?",
+        "options": [
+            "Make steps to update her pay to the same range as the others on your project, and ask her opinion and advice specifically during each meeting (along with others in your team).",
+            "Take the lower pay as a win for your project, as it will help keep costs low and her colleagues don't need to know.",
+            "Ask Jane to write down her knowledge of the industry, just in case she leaves.",
+            "No need to rock the boat \u2013 this is just how people work in this industry."
+        ],
+        "answer": "Make steps to update her pay to the same range as the others on your project, and ask her opinion and advice specifically during each meeting (along with others in your team)."
+    },
+    {
+        "id": 5,
+        "topic": "Value Delivery",
+        "question": "During one of your working group meetings, a stakeholder raises the concern that the product you are working on will be discontinued in the next five months. You were not aware of this, and your project budget has already been approved until the scheduled delivery, which is in five months also. What will you do next?",
+        "options": [
+            "Keep the project going as it is \u2013 the discontinued product isn\u2019t your responsibility.",
+            "Set a meeting with your project sponsor to share the information and a recommendation to terminate the project.",
+            "Change the scope of the project to meet a different product so your project can remain relevant.",
+            "Ask for additional funding to see if you can improve the product instead of discontinuing it."
+        ],
+        "answer": "Set a meeting with your project sponsor to share the information and a recommendation to terminate the project."
+    }
+]
