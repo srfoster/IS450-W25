@@ -17,10 +17,19 @@
 - [Feature] Immediate feedback mode (tell me if I got it right or wrong immediately after answering)
 - [Feature] Add a background color. Theme.
 - [Feature] Hamburger menu for navigation (exiting, home, etc)
+- [Feature] Better topic grid
+- [Feature] Better topic card:
+             - Show total questions in each topic
+- [Feature] Cooler theme (dark mode?)
+- [Feature] Back to topic selection after quiz
+- [Feature] Show progress during quiz 
+- [Feature] Gamification!
+            - ...
 
 - [Bug] Back button leaves the app
 
 - [Tech Debt] Project charter
+- [Tech Debt] Change "rational" to "rationale"  
 - [Tech Debt] Refactor the giant JSX returned from the App function
   - (DONE!) Extract out the grid of topic cards
   
